@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 40px;
+	width: 100%;
+	min-height: 100vh;
+	background-color: black;
+}
+
+.box {
+	background-color: coral;
+	/* Размещаем контейнеры по центру */
+	display: grid;
+	place-items: center;
+	width: 64px;
+	height: 64px;
+	border: 1px solid black;
+	position: relative;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(4, 64px);
+	justify-content: center;
+}
+
+.goblin {
+	background-image: url(2dbd01ce16c0fa83cb67.png);
+	background-size: contain;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+}
+
+.d-none {
+	display: none;
+}
+
+.counter {
+	text-align: center;
+	font-size: 200px;
+	color: white;
+}
+
