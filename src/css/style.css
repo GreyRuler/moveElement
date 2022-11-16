@@ -20,6 +20,7 @@ body {
 	width: 64px;
 	height: 64px;
 	border: 1px solid black;
+	border-radius: 50%;
 	position: relative;
 }
 
