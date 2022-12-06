@@ -28,6 +28,7 @@
 		"@babel/eslint-parser": "^7.19.1",
 		"@babel/preset-env": "^7.19.1",
 		"@jest/globals": "^29.0.3",
+		"@types/bootstrap": "^5.2.6",
 		"@types/jest": "^29.1.2",
 		"@typescript-eslint/eslint-plugin": "^5.39.0",
 		"@typescript-eslint/parser": "^5.39.0",
@@ -52,6 +53,7 @@
 		"webpack-dev-server": "^4.11.0"
 	},
 	"dependencies": {
+		"bootstrap": "^5.2.3",
 		"core-js": "^3.25.2"
 	}
 }
