@@ -4,24 +4,22 @@ export default class GamePlay {
 	private container: Element;
 
 	private counter: number;
+	private counterElement: HTMLElement | null;
 
 	constructor(container: Element) {
 		this.container = container;
 		this.counter = 0;
-		this.goblin = document.createElement('div');
-		this.goblin.classList.add('goblin');
+		this.goblin = this.createGoblin();
+		this.counterElement = document.querySelector('.counter');
 	}
 
 	init() {
-		const counterElement = document.querySelector('.counter');
 		const timeout = 1000;
-		let interval = setInterval(this.moveGoblin.bind(this), timeout);
+		setInterval(this.moveGoblin, timeout);
 		this.goblin.addEventListener('click', () => {
 			this.goblin.classList.add('d-none');
 			this.counter++;
-			counterElement!.textContent = String(this.counter);
-			clearInterval(interval);
-			interval = setInterval(this.moveGoblin.bind(this), timeout);
+			this.counterElement!.textContent = String(this.counter);
 		});
 	}
 
@@ -36,5 +34,11 @@ export default class GamePlay {
 	randomElementFromArray(array: any[]) {
 		const randomIndex = Math.floor(Math.random() * array.length);
 		return array[randomIndex];
+	}
+
+	createGoblin() {
+		const goblin = document.createElement('div');
+		goblin.classList.add('goblin');
+		return goblin;
 	}
 }
